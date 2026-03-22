@@ -86,15 +86,25 @@
         <form>
           <div class="form-group">
             <label>Pet</label>
-            <select required><option value="">Select pet</option><option>Buddy</option><option>Luna</option></select>
+            <select id="petSelect" required><option value="">Select pet</option><option>Buddy</option><option>Luna</option></select>
+          </div>
+          <div class="form-group">
+            <label>Visit type</label>
+            <select id="visitTypeSelect" required>
+              <option value="">Select type</option>
+              <option>Vaccination - Rabies</option>
+              <option>Vaccination - Distemper</option>
+              <option>Checkup</option>
+              <option>Dental consult</option>
+            </select>
           </div>
           <div class="form-group">
             <label>Branch</label>
-            <select required><option value="">Select branch</option><option>Downtown Clinic</option><option>Northside Clinic</option></select>
+            <select id="branchSelect" required><option value="">Select branch</option><option>Downtown Clinic</option><option>Northside Clinic</option></select>
           </div>
           <div class="form-group">
             <label>Veterinarian</label>
-            <select required><option value="">Select vet</option><option>Dr. Kim (Downtown)</option><option>Dr. Patel (Northside)</option><option>Dr. Chen (Downtown)</option></select>
+            <select id="vetSelect" required><option value="">Select vet</option><option>Dr. Kim (Downtown)</option><option>Dr. Patel (Northside)</option><option>Dr. Chen (Downtown)</option></select>
           </div>
           <div class="form-group">
             <label>Preferred date</label>
@@ -116,5 +126,22 @@
       </div>
     </div>
   </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const setSelectValue = (select, value) => {
+      if (!select || !value) return;
+      const option = Array.from(select.options).find(
+        (item) => item.value === value || item.text === value
+      );
+      if (option) {
+        select.value = option.value;
+      }
+    };
+
+    setSelectValue(document.getElementById("petSelect"), params.get("pet"));
+    setSelectValue(document.getElementById("visitTypeSelect"), params.get("visit"));
+    setSelectValue(document.getElementById("branchSelect"), params.get("branch"));
+    setSelectValue(document.getElementById("vetSelect"), params.get("vet"));
+  </script>
 </body>
 </html>
