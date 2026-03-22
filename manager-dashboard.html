@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manager Dashboard - VetChain</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header-split">
+      <div class="header-left">
+        <a href="manager-dashboard.html" class="brand brand-icon" aria-label="VetChain home">
+          <div class="mark"></div>
+        </a>
+      </div>
+      <div class="header-right">
+        <nav class="nav nav-right">
+          <a href="manager-dashboard.html" class="active">Dashboard</a>
+          <a href="inventory.html">Inventory</a>
+          <a href="shipment-logging.html">Shipments</a>
+          <a href="stock-thresholds.html">Thresholds</a>
+          <a href="vaccination-compliance.html">Vaccination</a>
+          <a href="lost-found-reports.html">Lost/Found</a>
+          <a href="login.html">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Manager dashboard</h1>
+        <p class="sub">Track inventory, shipments, stock usage, billing compliance, and vaccination indicators across branches.</p>
+        <div class="kpi-row mt-2">
+          <div class="kpi">
+            <div class="label">Low stock items</div>
+            <div class="value">3</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Overdue vaccinations</div>
+            <div class="value">5</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Outstanding invoices</div>
+            <div class="value">$450</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="font-size: 16px; margin: 0 0 12px;">Quick access</h2>
+        <a href="inventory.html" class="btn block mt-1">Inventory</a>
+        <a href="shipment-logging.html" class="btn ghost block mt-1">Log shipment</a>
+        <a href="lost-found-reports.html" class="btn ghost block mt-1">Lost/Found reports</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="page-title">Alerts</h2>
+      <p class="page-subtitle">Stock, compliance, and operational reminders</p>
+      <div class="panels" style="grid-template-columns: 1fr;">
+        <div class="tile" style="border-left: 4px solid var(--warning);">
+          <div style="font-weight: 700;">Low stock</div>
+          <p class="muted" style="margin: 4px 0; font-size: 13px;">Antihistamine at Downtown · Antibiotic at Northside</p>
+        </div>
+        <div class="tile" style="border-left: 4px solid var(--danger);">
+          <div style="font-weight: 700;">Vaccination overdue</div>
+          <p class="muted" style="margin: 4px 0; font-size: 13px;">5 pets with overdue vaccines across branches</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

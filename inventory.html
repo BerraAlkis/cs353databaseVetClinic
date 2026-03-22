@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventory - VetChain</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header-split">
+      <div class="header-left">
+        <a href="manager-dashboard.html" class="brand brand-icon" aria-label="VetChain home">
+          <div class="mark"></div>
+        </a>
+      </div>
+      <div class="header-right">
+        <nav class="nav nav-right">
+          <a href="manager-dashboard.html">Dashboard</a>
+          <a href="inventory.html" class="active">Inventory</a>
+          <a href="shipment-logging.html">Shipments</a>
+          <a href="stock-thresholds.html">Thresholds</a>
+          <a href="vaccination-compliance.html">Vaccination</a>
+          <a href="lost-found-reports.html">Lost/Found</a>
+          <a href="login.html">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card">
+      <h1 class="page-title">Inventory management</h1>
+      <p class="page-subtitle">View stock per branch. Filter by medicine name, category, supplier, expiration status. Stock usage driven by prescriptions.</p>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <h2 style="font-size: 16px; margin: 0 0 12px;">Filters</h2>
+        <div class="form-row">
+          <div class="form-group"><label>Branch</label><select><option>All</option><option>Downtown</option><option>Northside</option></select></div>
+          <div class="form-group"><label>Medicine</label><input type="text" placeholder="Search by name" /></div>
+          <div class="form-group"><label>Category</label><select><option>All</option><option>Antibiotics</option><option>Antihistamines</option></select></div>
+          <div class="form-group"><label>Supplier</label><select><option>All</option></select></div>
+          <div class="form-group"><label>Expiration</label><select><option>All</option><option>Expiring soon</option><option>Expired</option></select></div>
+        </div>
+        <button class="btn">Apply</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Medicine</th><th>Branch</th><th>Quantity</th><th>Threshold</th><th>Supplier</th><th>Expiration</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Antihistamine 10mg</td><td>Downtown</td><td>12</td><td>20</td><td>MedSupply Co</td><td>Jun 2024</td>
+              <td><span class="pill wait">Low</span></td>
+            </tr>
+            <tr>
+              <td>Antibiotic 500mg</td><td>Northside</td><td>8</td><td>15</td><td>PharmaPlus</td><td>Aug 2024</td>
+              <td><span class="pill wait">Low</span></td>
+            </tr>
+            <tr>
+              <td>Antihistamine 10mg</td><td>Northside</td><td>45</td><td>20</td><td>MedSupply Co</td><td>Jul 2024</td>
+              <td><span class="pill ok">OK</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
