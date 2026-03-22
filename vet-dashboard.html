@@ -83,6 +83,46 @@
         </table>
       </div>
     </section>
+
+    <section class="card">
+      <h2 class="page-title">Vaccination Plan & Records</h2>
+      <p class="page-subtitle">Threshold: 30 days past due (configurable) · Owners see upcoming/overdue highlights</p>
+      <div class="panels" style="grid-template-columns: 1fr 1fr; margin-top: 12px;">
+        <div class="tile">
+          <div style="font-weight: 700;">Plan owner</div>
+          <p class="muted" style="margin: 4px 0; font-size: 13px;">Dr. Kim · Downtown Clinic</p>
+        </div>
+        <div class="tile">
+          <div style="font-weight: 700;">Current plan</div>
+          <p class="muted" style="margin: 4px 0; font-size: 13px;">Rabies, Distemper, FVRCP</p>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-top: 16px;">
+        <table>
+          <thead>
+            <tr><th>Pet</th><th>Vaccine</th><th>Date</th><th>Batch</th><th>Next due</th><th>Admin vet</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Buddy</td><td>Rabies</td><td>Jan 08</td><td>RB-2219</td><td>Feb 15</td><td>Dr. Kim</td>
+              <td><span class="pill danger">Overdue 42d</span></td>
+            </tr>
+            <tr>
+              <td>Whiskers</td><td>FVRCP</td><td>Jan 22</td><td>FV-8841</td><td>Feb 16</td><td>Dr. Chen</td>
+              <td><span class="pill danger">Overdue 35d</span></td>
+            </tr>
+            <tr>
+              <td>Luna</td><td>Distemper</td><td>Feb 05</td><td>DS-1132</td><td>Mar 06</td><td>Dr. Kim</td>
+              <td><span class="pill danger">Overdue 31d</span></td>
+            </tr>
+            <tr>
+              <td>Max</td><td>Rabies</td><td>Mar 10</td><td>RB-2490</td><td>Apr 10</td><td>Dr. Patel</td>
+              <td><span class="pill wait">Due in 12d</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </div>
 </body>
 </html>
