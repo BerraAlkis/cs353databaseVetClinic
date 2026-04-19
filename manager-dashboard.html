@@ -18,10 +18,7 @@
         <nav class="nav nav-right">
           <a href="manager-dashboard.html" class="active">Dashboard</a>
           <a href="inventory.html">Inventory</a>
-          <a href="shipment-logging.html">Shipments</a>
-          <a href="stock-thresholds.html">Thresholds</a>
           <a href="vaccination-compliance.html">Vaccination</a>
-          <a href="lost-found-reports.html">Lost/Found</a>
           <a href="login.html">Logout</a>
         </nav>
       </div>
@@ -30,7 +27,7 @@
     <section class="hero">
       <div class="card">
         <h1>Manager dashboard</h1>
-        <p class="sub">Track inventory, shipments, stock usage, billing compliance, and vaccination indicators across branches.</p>
+        <p class="sub">Track branch medicine inventory, supply logs, stock usage, billing compliance, and vaccination indicators across branches.</p>
         <div class="kpi-row mt-2">
           <div class="kpi">
             <div class="label">Low stock items</div>
@@ -48,9 +45,7 @@
       </div>
       <div class="card">
         <h2 style="font-size: 16px; margin: 0 0 12px;">Quick access</h2>
-        <a href="inventory.html" class="btn block mt-1">Inventory</a>
-        <a href="shipment-logging.html" class="btn ghost block mt-1">Log shipment</a>
-        <a href="lost-found-reports.html" class="btn ghost block mt-1">Lost/Found reports</a>
+        <a href="inventory.html" class="btn block mt-1">Inventory & supply</a>
       </div>
     </section>
 
@@ -66,6 +61,25 @@
           <div style="font-weight: 700;">Vaccination overdue</div>
           <p class="muted" style="margin: 4px 0; font-size: 13px;">5 pets with overdue vaccines across branches</p>
         </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="page-title">Reports snapshot</h2>
+      <p class="page-subtitle">Key analytics for inventory usage, vaccination compliance, and revenue by branch.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Report</th><th>Branch</th><th>Period</th><th>Indicator</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stock consumption</td><td>Downtown</td><td>Mar</td><td>142 units</td><td>Top: Antibiotic 500mg</td></tr>
+            <tr><td>Vaccination compliance</td><td>All</td><td>Mar</td><td>92%</td><td>Goal: 95%</td></tr>
+            <tr><td>Overdue vaccinations</td><td>Northside</td><td>Mar</td><td>5 pets</td><td>Follow-up calls queued</td></tr>
+            <tr><td>Wasted inventory (expired)</td><td>Downtown</td><td>Mar</td><td>5 units</td><td>Antibiotic 500mg</td></tr>
+            <tr><td>Revenue per branch</td><td>All</td><td>Mar</td><td>$24,300</td><td>Northside +8% MoM</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
